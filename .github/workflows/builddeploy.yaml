@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '20.11.1'
       - name: Install Dependencies
-        run: npm install
+        run: npm config set registry http://registry.npmjs.org/ && npm install
       - name: Build
         run: npm run build
       - name: Upload artifact
